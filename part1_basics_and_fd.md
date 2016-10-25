@@ -74,7 +74,7 @@ Where do we commonly see file descriptors?
 
 Ever see something like this:
 	
-	/path/to/my/amazing/script.sh 2&>1
+	/path/to/my/amazing/script.sh 2>&1
 
 what does the `2>&1` mean?
 
@@ -95,7 +95,7 @@ Each time a program is started or invoked by bash, bash creates a running proces
 
 NOTE: it's important to know that File descriptors are specific to a process. That means even if you write a bash command that inturn invokes 2 separate processes, the file descriptors for each process are different. for example, lets brake this down from a file descriptor point of view:
 
-	 echo "hello world" | grep "hell" 2&>1 > file.txt
+	 echo "hello world" | grep "hell" 2>&1 > file.txt
 
 How many processes? 
 
