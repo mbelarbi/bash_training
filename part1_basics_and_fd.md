@@ -81,6 +81,7 @@ what does the `2>&1` mean?
 both 2 and 1 are file descriptors, 1 is the stdout and 2 is the stderr. what we are saying is we want to run the command and we wish to move all stderr outputs to the file descriptor 1 output which is stdout. In other words we want all errors to be displayed through the regular output.
 
 So why not `2>1`, why do we need the `&`?
+
 The `&` tells bash that what follows is a file descriptor, without it, the errout (from file descriptor 2) will be written to a file called '1'
 
 
