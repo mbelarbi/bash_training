@@ -2,7 +2,7 @@ Functions
 =========
 Functions in bash serve the same purpose as all programming languages, they create a temporary command that does a unit of work. This unit can be as big or as small as you want. This unit of work is later invoked down the line zero or more times. the structure of a function is as follows:
 
-[ function ] name [ () ] { unit-of-work } [ redirection ]
+	[ function ] name [ () ] { unit-of-work } [ redirection ]
 
 the keyword function is optional, this is the n followed by the name of the function. The () are always empty in bash they do not server to take in arguements like some other programming languages, their purpose is to indicate that this is a function. This is then followed by the acutual unit of work inside {}. Finally we have any redirections we wish to add to our functions.
 
@@ -16,8 +16,8 @@ In bash you can choose to put the keyword 'function' or omit it, there is no dif
 		echo 'world'
 	}
 
-The only difference is that functions defined without the 'function' keyword are more portable to other non bash shells.
-Because the brackets () only serve to tell us this is a function, we can also omit them if we choose to use the keyword 'function'. We must however use at least one of the 2, either the keyword function, or () or both. The use of just the brackets is more commonly used. Completely up to you in what you choose.
+The only difference is that functions defined without the `function` keyword are more portable to other non bash shells.
+Because the brackets `()` only serve to tell us this is a function, we can also omit them if we choose to use the keyword `function`. We must however use at least one of the 2, either the keyword `function`, or `()` or both. The use of just the brackets is more commonly used. Completely up to you in what you choose.
 
 arguements
 ----------
@@ -30,7 +30,7 @@ Arguements in bash are not named or decalred as part of the function definition.
 	# lets call out function
 	greetings Miloud
 
-You refer to ordered and not named arguements in bash, this is done with $n, where n is a positive number. $0 is reserved for the script call itself. The beauty of this is if you wish to handle extra args, you can do so easily without changing the function declaration, only the unit of work and the piece that calls it. the downside is that it can get a little hard to track or keep up with ordered arguements, named arguements are easier to handle and read.
+You refer to ordered and not named arguements in bash, this is done with `$n`, where n is a positive number. `$0` is reserved for the script call itself. The beauty of this is if you wish to handle extra args, you can do so easily without changing the function declaration, only the unit of work and the piece that calls it. The downside is that it can get a little hard to track or keep up with ordered arguements, named arguements are easier to handle and read.
 
 Calling functions
 -----------------
