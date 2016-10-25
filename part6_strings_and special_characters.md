@@ -60,3 +60,24 @@ Notice the space before `file1`, to eliminate this nasty bug we should wrap our 
 	rm -r "home/miloudbelarbi/Documents/$filename"
 	
 Yes you could write and if statement to check the IFS, but why not just use double quotes? :)
+
+Special characters
+==================
+Bash considers the following as special:
+
+|Character| Description													|
+|---------|-------------------------------------------------------------------------------------------------------------|
+|`" "`	  |Whitespace: This would be a space, tab, new line etc. Bash uses this to determine where words start and end  |
+|`$`	  |Expansion: Used to evaluate variables and arguements								|
+|`''`	  |Single quotes: used encapsulate strings inside as literals. special characters are ignored			|
+|`""`	  |Double quotes: same as single quotes but allows for variable expansions					|
+|`\`	  |Backslash: escape special characters										|
+|`#`	  |Comment													|
+|`[[]]`	  |conditional test: evaluate soemthing to either true or false, i.e. [[ 1 > 0 ]] evaluates to true		|
+|`!`	  |Negate: reverse the result of a test or command								|
+|`>`, `<` |Redirection: redirect the input or output of a command							|
+|`|`	  |Pipe: special redirection, redirect the output of one command as the input of another			|
+|`;`	  |Command separator: separate 2 bash commands									|
+|`{}`	  |inline group: group multiple commands as though they were one command					|
+|`()`	  |subshell group: same as above but the group is executed in another shell and the result being used inline	|
+|`(())`	  |Arithmetic expression: evaluate and arithmetic using +, -, * or /						|
