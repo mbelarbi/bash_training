@@ -1,6 +1,6 @@
 Lists 
 =====
-command1 co command2 co command3 ...
+	command1 co command2 co command3 ...
 
 Lists are just a sequence of 2 or more commands. A bash script is a list, many commands one after the other. The important thing with lists is that there is a control operator (co) that separates them and tells bash how to run them when in sequence. Writing a bash command is fairly straight forward, the get the most of bash it is important to understand how we connect 1 or more comamnds together. this is why control operators are important.
 
@@ -125,15 +125,17 @@ ampersand redirection &>, &>>
 -----------------------------
 The ampersand redirects both standard out and standard error, either overwriting (single >) or appending (double >>) respectively.
 
-===============
-IMPORTANT NOTE: all redirections are interpreted before any commands are run. Here is a task scenario to explain the importance of this more clearly.
-===============
+
+**IMPORTANT NOTE**: all redirections are interpreted before any commands are run. Here is a task scenario to explain the importance of this more clearly.
 
 	echo 'hello world' > file.txt
+	
 we now have a file with the contents 'hello world'. Brilliant, all good so far.
+
 	cat file.txt | grep 'hell' > file.txt
+	
 what do you expect the contents of file .txt to be? 
 
-file.txt is actually empty. Why? thats because bash handles redirections before commands. In other words, redirection of the output from the grep command causing file.txt to the opened for writing and because we are using a single > we have truncated the contents of the file ready for writing. bash then cats the file (it.s empty remember), the pipes the output to grep and finally storing that output into the same file. 
+file.txt is actually empty. Why? thats because bash handles redirections before commands. In other words, redirection of the output from the grep command causing file.txt to the opened for writing and because we are using a `>` we have truncated the contents of the file ready for writing. bash then cats the file (it.s empty remember), the pipes the output to grep and finally storing that output into the same file. 
 
 
