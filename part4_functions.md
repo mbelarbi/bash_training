@@ -32,6 +32,15 @@ Arguements in bash are not named or decalred as part of the function definition.
 
 You refer to ordered and not named arguements in bash, this is done with `$n`, where n is a positive number. `$0` is reserved for the script call itself. The beauty of this is if you wish to handle extra args, you can do so easily without changing the function declaration, only the unit of work and the piece that calls it. The downside is that it can get a little hard to track or keep up with ordered arguements, named arguements are easier to handle and read.
 
+Special arguement parameters
+----------------------------
+There are several augmentations or useful expansions that bash allows you to do with respect to the arguements passed in to a command.
+
+* `$*`: Join all arguements with current IFS (internal field separator)
+* `$#`: Number of arguements passed in
+* `$?`: The exit code of the previous command (1 for failure, 0 for success)
+* `$$`: The unique proccess identifier of the current shell process that is running
+
 Calling functions
 -----------------
 Functions are simply called by using their name :) followed by any areguements. The only constraint is that a function must be decalred before it is called. SO in the above greetings function, I cannot call greeting before the function is even declared.
