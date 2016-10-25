@@ -97,11 +97,13 @@ NOTE: it's important to know that File descriptors are specific to a process. Th
 
 	 echo "hello world" | grep "hell" 2&>1 > file.txt
 
-how many processes? 2 the echo and the grep processes
-the echo process has input = keyboard,
-the grep command has input = the output from the echo command
-the grep command has error output = the screen
-the grep command has standard output = file.txt
+How many processes? 
+
+- 2 the echo and the grep processes*
+- the echo process has input = keyboard,
+- the grep command has input = the output from the echo command
+- the grep command has error output = the screen
+- the grep command has standard output = file.txt
 
 Successful bash command
 =======================
