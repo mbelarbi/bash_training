@@ -6,13 +6,13 @@ Some commands run quick and some take a long time, and some will not end unless 
 
 Bash reads commands 1 line at a time, i.e:
 
-	echo 'hello world'  # this is one line and is executed immediately
+	echo 'hello world'  	# this is one line and is executed immediately
 	
-	if [[ 1 > 0 ]]; then  # the if statement started but not complete so bash cannot run this yet
+	if [[ 1 > 0 ]]; then  	# the if statement started but not complete so bash cannot run this yet
 		echo 'yes';
 	else
 		echo 'no';
-	fi  # only once 'fi' has been issued does bash run this as a single command.
+	fi						# only once 'fi' has been issued does bash run this as a single command.
 
 The if block is a compound command, that is there is no specific output or result from doing an if, it ust groups a bunch of smaller logical commands.
 
