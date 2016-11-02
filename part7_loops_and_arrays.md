@@ -69,5 +69,5 @@ Bash identified the words separated by spaces. This is a clean example, but ther
 	
 Monday, Saturday and Sunday need double quotes for the expansion. Saturday and Sunday further need inline grouping for the array access.
 	
-> **Tip:** Always quote use quotes when in doubt or when you can.
+> **Tip:** Always use quotes when in doubt or when you can.
 	
