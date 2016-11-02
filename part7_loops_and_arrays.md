@@ -14,10 +14,7 @@ But how do we access the array's items?
 	echo "The second item is $days[1]" 		# This is WRONG
 	echo "The second item is ${days[1]}" 	# This is RIGHT
 	
-	echo "The second item is $days:1" 		# This is WRONG
-	echo "The second item is ${days:1}" 	# This is RIGHT
-	
-Elements can be accessed with a squred bracket notation or a colon, either one is fine. When accessing the elements in an array within an expansion we must use the inline grouping (`{}`). With out the inline grouping, the `[1]` is not considered as part of the expansion, as such bash will interperate it as a string literal.
+When accessing the elements in an array within an expansion we must use the inline grouping (`{}`). With out the inline grouping, the `[1]` is not considered as part of the expansion, as such bash will interperate it as a string literal.
 The array variable will always yield the zeo indexed item when called with no index (i.e. if we call `$days` with no index). Therefore the echo will look like:
 	
 	The second item is Monday[1]		# no inline grouping
@@ -69,9 +66,40 @@ Bash identified the words separated by spaces. This is a clean example, but ther
 
 	mon="Monday"
 	weekends=('Saturday' 'Sunday')
-	days=("$mon" 'Tuesday' 'Wednesday' 'Thursday' 'Friday' "${weekends[0]}" "${weekends[1]}")
+	days=("$mon" 'Tuesday' 'Wednesday' 'Thursday' 'Friday' "${weekends[0]}" "${weekends[1]}" "There is no 8th day")
 	
-Monday, Saturday and Sunday need double quotes for the expansion. Saturday and Sunday further need inline grouping for the array access.
+Monday, Saturday and Sunday need double quotes for the expansion. Saturday and Sunday further need inline grouping for the array access. The additional element has been allowed to have spaces in it due to quotes. `There is no 8th day` is all one element.
 	
 > **Tip:** Always use quotes when in doubt or when you can.
+
+Array operations
+----------------
+Given the following array, lets perform various operations. 
+
+	days=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday")
 	
+	# Access item 0
+	echo $days							# Monday
+	
+	# Access item 1
+	echo ${days[1]}						# Tuesday
+	
+	# Access out of bounds given empty result
+	echo ${days[999]}					# 
+	
+	# (for each) all items
+	echo ${days[*]}						# Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+	echo ${days[@]}						# Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+	
+	# Length of array
+	echo ${#days[*]}					# 7
+	echo ${#days[@]}					# 7
+	
+	# items from index 2 onwards
+	echo ${days[*]:2}					# Wednesday Thursday Friday Saturday Sunday
+	
+	# from index 1 get 3 items
+	echo ${days[*]:1:3}					# Tuesday Wednesday Thursday
+	
+	# For each item in the array, perform a string operation (replace 1st occurance of day with FOO)
+	echo ${days[@]/day/FOO}					# MonFOO TuesFOO WednesFOO ThursFOO FriFOO SaturFOO SunFOO
