@@ -102,4 +102,4 @@ Given the following array, lets perform various operations.
 	echo ${days[*]:1:3}					# Tuesday Wednesday Thursday
 	
 	# For each item in the array, perform a string operation (replace 1st occurance of day with FOO)
-	echo ${days[@]/day/FOO}					# MonFOO TuesFOO WednesFOO ThursFOO FriFOO SaturFOO SunFOO
+	echo ${days[@]/day/FOO}				# MonFOO TuesFOO WednesFOO ThursFOO FriFOO SaturFOO SunFOO
