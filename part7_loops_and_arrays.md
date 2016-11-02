@@ -49,8 +49,8 @@ Lets take a closer look at how this is enforced by bash:
  
 Two major bugs have been introduced:
 
- - 1: We have overwritten `[2]="wednesday"` with `[2]="Thursday"`
- - 2: Our array appears as though it has 7 elements, but due to the above point, we lose the `Wednesday` element, and infact we actually have 6 elements.
+1. We have overwritten `[2]="wednesday"` with `[2]="Thursday"`
+2. Our array appears as though it has 7 elements, but due to the above point, we lose the `Wednesday` element, and infact we actually have 6 elements.
  
 
 Quotation
