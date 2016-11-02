@@ -51,6 +51,8 @@ Two major bugs have been introduced:
 
 1. We have overwritten `[2]="wednesday"` with `[2]="Thursday"`
 2. Our array appears as though it has 7 elements, but due to the above point, we lose the `Wednesday` element, and infact we actually have 6 elements.
+
+> **Tip:** Avoid mixing key indexes with no key indexes in the declaration of an array.
  
 
 Quotation
@@ -67,4 +69,5 @@ Bash identified the words separated by spaces. This is a clean example, but ther
 	
 Monday, Saturday and Sunday need double quotes for the expansion. Saturday and Sunday further need inline grouping for the array access.
 	
+> **Tip:** Always quote use quotes when in doubt or when you can.
 	
