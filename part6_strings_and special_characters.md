@@ -66,8 +66,16 @@ Length of String
 unlike most languages, there is no function for finding the length of a string, instead we use the `#` special character (see btable below)
 
 	name='Miloud'
-	echo "there are ${#name} characters in '$name'"
+	echo "there are ${#name} characters in '$name'"		# there are 6 characters in 'Miloud'
+	
+Substring
+---------
 
+	name='Miloud'
+	echo "${name:2}" 		# loud
+	echo "${name:1:3}"		# ilo
+	echo "${name:0:-2}"		# Milo
+	
 Special characters
 ==================
 Bash considers the following as special:
