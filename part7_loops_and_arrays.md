@@ -14,8 +14,10 @@ But how do we access the array's items?
 	echo "The second item is $days[1]" 		# This is WRONG
 	echo "The second item is ${days[1]}" 	# This is RIGHT
 	
-When accessing the elements in an array within an expansion we must use the inline grouping (`{}`). With out the inline grouping,
-the `[1]` is not considered as part of the expansion, as such bash will interperate it as a string literal.
+	echo "The second item is $days:1" 		# This is WRONG
+	echo "The second item is ${days:1}" 	# This is RIGHT
+	
+Elements can be accessed with a squred bracket notation or a colon, either one is fine. When accessing the elements in an array within an expansion we must use the inline grouping (`{}`). With out the inline grouping, the `[1]` is not considered as part of the expansion, as such bash will interperate it as a string literal.
 The array variable will always yield the zeo indexed item when called with no index (i.e. if we call `$days` with no index). Therefore the echo will look like:
 	
 	The second item is Monday[1]		# no inline grouping
