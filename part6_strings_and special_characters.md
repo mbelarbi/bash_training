@@ -1,5 +1,5 @@
-String and quotes
-=================
+Strings and quotes
+==================
 
 There are 2 ways to use strings in bash:
 * `'hello world'`
@@ -61,6 +61,13 @@ Notice the space before `file1`, to eliminate this nasty bug we should wrap our 
 	
 Yes you could write and if statement to check the IFS, but why not just use double quotes? :)
 
+Length of String
+----------------
+unlike most languages, there is no function for finding the length of a string, instead we use the `#` special character (see btable below)
+
+	name='Miloud'
+	echo "there are ${#name} characters in '$name'"
+
 Special characters
 ==================
 Bash considers the following as special:
@@ -72,7 +79,7 @@ Bash considers the following as special:
 |`''`	  |Single quotes: used encapsulate strings inside as literals. special characters are ignored			|
 |`""`	  |Double quotes: same as single quotes but allows for variable expansions					|
 |`\`	  |Backslash: escape special characters										|
-|`#`	  |Comment													|
+|`#`	  |Comment. Also used for length in variable expansion								|
 |`[[]]`	  |conditional test: evaluate soemthing to either true or false, i.e. [[ 1 > 0 ]] evaluates to true		|
 |`!`	  |Negate: reverse the result of a test or command								|
 |`>`, `<` |Redirection: redirect the input or output of a command							|
