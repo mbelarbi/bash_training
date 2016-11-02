@@ -2,7 +2,7 @@ Arrays
 ======
 Arrays in bash are like arrays in other languages. Basically containers for a set of data.
 
-	days=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday")
+	days=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday") 	#method1
 	
 This is a simple array of the days of the week stored in a variable called `days`. a few things to note:
 
@@ -53,6 +53,18 @@ Two major bugs have been introduced:
  - 2: Our array appears as though it has 7 elements, but due to the above point, we lose the `Wednesday` element, and infact we actually have 6 elements.
  
 
+Quotation
+---------
+We could define our days array as follows:
+
+	days=(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
 	
+Bash identified the words separated by spaces. This is a clean example, but there would be instances where elements aren't simple words (i.e file directories, have symbols etc). Which is why It is recommended to always quote your elements to reduce the chance of errors happeneing. Quotes can be single or double (double for expansions), i.e:
+
+	mon="Monday"
+	weekends=('Saturday' 'Sunday')
+	days=("$mon" 'Tuesday' 'Wednesday' 'Thursday' 'Friday' "${weekends[0]}" "${weekends[1]}")
+	
+Monday, Saturday and Sunday need double quotes for the expansion. Saturday and Sunday further need inline grouping for the array access.
 	
 	
