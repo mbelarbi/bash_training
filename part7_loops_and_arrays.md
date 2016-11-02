@@ -35,6 +35,8 @@ When an element in an array is declared with no index (as in `#method1` and `#me
   - If it's the first item it will take index 0
   - It will use a ++ index notation: that is it will take the index on the previous element's item and increment by 1.
   
+![Alt text](/array_index.png? "Array indexing")
+  
 Lets take a closer look at how this is enforced by bash:
 
 	days=("Monday" [2]="Wednesday" [1]="Tuesday" "Thursday" "Friday" "Saturday" "Sunday")
