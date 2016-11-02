@@ -1,5 +1,7 @@
 Arrays
 ======
+	variable=([ [i]= ]"item 1"  [ [i++]= ]"item 2" [ [i++]= ]"item n" ....)
+
 Arrays in bash are like arrays in other languages. Basically containers for a set of data.
 
 	days=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday") 	#method1
