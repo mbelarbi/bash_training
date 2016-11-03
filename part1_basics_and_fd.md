@@ -108,7 +108,7 @@ How many processes?
 Example usage of file descriptors
 ---------------------------------
 	
-	# Redirect standard out and standard error separately
+	# Redirect standard out (FD1) and standard error (FD2) separately
 	command >stdout_redirect.log 2>stderr_redirect.log
 
 	# Redirect standard error and out together
