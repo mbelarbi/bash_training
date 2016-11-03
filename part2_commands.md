@@ -95,7 +95,7 @@ The pipe is a way to connect 2 comamnds together by passing the FD1 of command 1
 
 this is broken down in 2 commands, command1 (the `echo` command) and command 2 (the `grep` command). The standard output (FD1) of the `echo` command is used as the standard input (FD0) of `grep` command.
 
-A pipe redirect can also be issued as `|&`. This is the equivalent of `2>&1` that we talked about previously. This means that we not only want to pass the standard output (FD1) but also the standard error (FD2) both as the standard input (FD1) of the grep command. Sometimes this can be undesirable unless the second command is prepared to handle any error the first command will throw. here is an example of this:
+A pipe redirect can also be issued as `|&`. (as of bash version 4) This is the equivalent of `2>&1`  that we talked about previously. This means that we not only want to pass the standard output (FD1) but also the standard error (FD2) both as the standard input (FD1) of the grep command. Sometimes this can be undesirable unless the second command is prepared to handle any error the first command will throw. here is an example of this:
 
 	find -name 'myfile.*' |& grep -v "Permission denied"
 
