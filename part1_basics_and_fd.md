@@ -105,9 +105,21 @@ How many processes?
 - the grep command has error output = the screen
 - the grep command has standard output = file.txt
 
+Example usage of file descriptors
+---------------------------------
+	
+	# Redirect standard out and standard error separately
+	command >stdout_redirect.log 2>stderr_redirect.log
+
+	# Redirect standard error and out together
+	command >stdout_redirect.log 2>&1
+
+	# Merge standard error with standard out and pass them both to another command
+	command 2>&1 | command2
+
 Successful bash command
 =======================
-A successful bash command is that which exists with code 0.
-
+A successful bash command exists with code 0.
+An unsuccessful bash command exists with a code other than 0 (mainly 1).
 	
 
