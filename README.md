@@ -9,4 +9,4 @@ Contents
   - [Part 5: Builtins & Arithmetics](part5_builtins_and_arithmetics.md)
   - [Part 6: Strings & Special Characters](part6_strings_and special_characters.md)
   - [Part 7: Arrays](part7_arrays.md)
-  - [Part 8: Loops]
+  - [Part 8: Loops](part8_loops.md)
