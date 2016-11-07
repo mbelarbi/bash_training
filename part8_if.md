@@ -65,3 +65,25 @@ Similar to `AND` except if any of the conditions are met, the unit of work is ex
 	fi
 
 If the first condition is met, bash does not bother evaluating the conditions that follow, since this is an `OR`.
+
+Comparison
+==========
+
+There are several ways to compare of test if a condition is met, below are the most common ones:
+
+|Comparison		| Type			| Description															|
+|---------------|---------------|-----------------------------------------------------------------------|
+|`-eq`	  		|Arithmetic 	|`if [ "$a" -eq "$b" ]` is equal to  									|
+|`-ne`	  		|Arithmetic 	|`if [ "$a" -ne "$b" ]`	is not qual to									|
+|`-gt`	  		|Arithmetic 	|`if [ "$a" -gt "$b" ]` is greater than									|
+|`-ge`	  		|Arithmetic 	|`if [ "$a" -gt "$b" ]` is greater than or equal to						|
+|`-lt`	  		|Arithmetic 	|`if [ "$a" -lt "$b" ]` is less than									|
+|`-le`	  		|Arithmetic 	|`if [ "$a" -le "$b" ]` is less than or equal to						|
+|`<`	  		|Arithmetic 	|`(( "$a" < "$b" ))` less than with double parentheses					|
+|`<=`	  		|Arithmetic 	|`(( "$a" <= "$b" ))` less than or equal to with double parentheses		|
+|`>`	  		|Arithmetic 	|`(( "$a" > "$b" ))` greater than with double parentheses				|
+|`>=`	  		|Arithmetic 	|`(( "$a" >= "$b" ))` greater than or equal to with double parentheses	|
+|`==` 			|String		 	|`if [ "$a" == "$b" ]` String comparison, equal to						|
+|`!=` 			|String		 	|`if [ "$a" != "$b" ]` String comparison, not equal to					|
+|`-z`	  		|String		 	|`if [ -z "$a" ]` String is null, has zero length						|
+|`-n`	  		|String		 	|`if [ -n "$a" ]` String is not null									|
