@@ -107,4 +107,28 @@ Bash considers the following as special:
 |`;`	  |Command separator: separate 2 bash commands									|
 |`{}`	  |inline group: group multiple commands as though they were one command					|
 |`()`	  |subshell group: same as above but the group is executed in another shell and the result being used inline	|
-|`(())`	  |Arithmetic expression: evaluate and arithmetic using +, -, * or /						|
+|`(())`	  |Arithmetic expression: evaluate and arithmetic expression using +, -, *, /, <, <=, >, >=			|
+
+
+> **Task:** Can you think of why we need double brackets for arithmetic expressions?
+
+take 2 if statements:
+	
+	age=14
+	# one of no set of brackets: THIS IS WRONG
+	if ( age > 18 ); then
+		echo "you can vote"
+	fi
+	
+	# double brackets: THIS IS RIGHT
+	if (( age > 18 )); then
+		echo "you can vote"
+    fi
+	
+In the 1st example, bash will try to do a redirect, i.e redirect age to a fiel called 18, to tell bash we want to evaluate the arithmetic expression of greater than, we need doubel brackets `((  ))`. Alternatively we can use the `-gt` (greater than) notation:
+
+	if [ age -gt 18 ]; then
+		echo "you can vote"
+    fi
+	
+Since this is not an arithmetic expression, rather a syntax specific evaluation, we do nto need the doubel brackets `((  ))`
