@@ -99,6 +99,6 @@ A pipe redirect can also be issued as `|&`. (as of bash version 4) This is the e
 
 	find -name 'myfile.*' |& grep -v "Permission denied"
 
-Task: why do we need `|&` and not the regular `|` ?
+> **Task:** why do we need `|&` and not the regular `|` ?
 
 
