@@ -45,3 +45,23 @@ If statements are linear. The first condition met is evaluated and no other. let
 This is considered as one if statement. The unit of work for the first condition satisfied is executed. Even if subsequent condition might be true, bash will never get round to evaluating them since a condition has been satisfied. In the above example, bash will echo `before millennium`. Subsequent conditions are only evaluated in the order they are written if the previous conditions fail.
 
 The `else` has a hidden condition that you do not need to specify: `if all previous conditions are false`. `else` **CANNOT** be used before `elif` statements in the same if block. It is a syntax error to do so.
+
+AND
+---
+This is a way to ensure multiple conditions are met for a unit of work to be done, this is done using `&&`:
+
+	if [ $colour == "orange" ] && [ $type == 'citrus' ]; then
+		echo "this could be an orange"
+	fi
+		
+Both the conditions MUST be met for the unit of work to be executed. If the first condition is not met, bash will not bother finding out if the `$type is citrus`.
+
+OR
+--
+Similar to `AND` except if any of the conditions are met, the unit of work is executed, this is doen using `||`:
+	
+	if [ $day == "christmas" ] || [ $day == "birthday" ]; then
+		echo "time for gifts"
+	fi
+
+If the first condition is met, bash does not bother evaluating the conditions that follow, since this is an `OR`.
