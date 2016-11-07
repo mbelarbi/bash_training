@@ -107,7 +107,7 @@ Bash considers the following as special:
 |`;`	  |Command separator: separate 2 bash commands									|
 |`{}`	  |inline group: group multiple commands as though they were one command					|
 |`()`	  |subshell group: same as above but the group is executed in another shell and the result being used inline	|
-|`(())`	  |Arithmetic expression: evaluate and arithmetic expression using +, -, *, /, <, <=, >, >=			|
+|`((  ))` |Arithmetic expression: evaluate and arithmetic expression using +, -, *, /, <, <=, >, >=			|
 
 
 > **Task:** Can you think of why we need double brackets for arithmetic expressions?
