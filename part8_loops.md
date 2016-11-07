@@ -58,4 +58,8 @@ The `until` loop is very similar to the `while` loop in structure, with the exac
 		let apples=apples+1		
 	done
 	
-To better understand this, we need to negate the condition. in otherwords, the `until` loop thinks in the following way: "I'm going to continue to do the unit of work, until some condtion is met". That is to say the exit clause is the condition being true. and the condition for doing the loop is if the `condition` is not true.
+To better understand this, we need to negate the condition. in otherwords, the `until` loop thinks in the following way: 
+	
+	"I'm going to continue to do the unit of work, until some condtion is met". 
+
+That is to say the exit clause is the condition being true. and the condition for doing the loop is if the `condition` is not true.
