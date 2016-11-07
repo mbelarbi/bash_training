@@ -14,7 +14,7 @@ Bash reads commands 1 line at a time, i.e:
 		echo 'no';
 	fi						# only once 'fi' has been issued does bash run this as a single command.
 
-The if block is a compound command, that is there is no specific output or result from doing an if, it ust groups a bunch of smaller logical commands.
+The if block is a compound command, that is there is no specific output or result from doing an if, it just groups a bunch of smaller logical commands.
 
 Bash will continue asking for more information until it has enough to execute the command, we are doing this in the interactive mode of bash. alternatively we could just put that if block in a file and run the script, this is the non interactive mode.
 
