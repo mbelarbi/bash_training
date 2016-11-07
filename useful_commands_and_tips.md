@@ -31,4 +31,5 @@ recursively remove all empty directories
 Exit appropriately
 ------------------
 `exit 0`: Put that at the end of your scripts.
+
 `exit 1`: Use this to indicate an unssucceful exit.
