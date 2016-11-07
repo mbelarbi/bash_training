@@ -125,7 +125,7 @@ take 2 if statements:
 		echo "you can vote"
     fi
 	
-In the 1st example, bash will try to do a redirect, i.e redirect age to a fiel called 18, to tell bash we want to evaluate the arithmetic expression of greater than, we need doubel brackets `((  ))`. Alternatively we can use the `-gt` (greater than) notation:
+In the 1st example, bash will try to do a redirect, i.e redirect age to a file called 18. To tell bash we want to evaluate the arithmetic expression of 'greater than', we need double brackets `((  ))`. Alternatively we can use the `-gt` (greater than) notation:
 
 	if [ age -gt 18 ]; then
 		echo "you can vote"
