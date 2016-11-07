@@ -63,3 +63,40 @@ To better understand this, we need to negate the condition. in otherwords, the `
 	"I'm going to continue to do the unit of work, until some condtion is met". 
 
 That is to say the exit clause is the condition being true. and the condition for doing the loop is if the `condition` is not true.
+
+
+Loop control
+============
+Some times we need to prematurely exit out of a loop (even if our exit clause has not yet been met), or we need to skip the current iteration and go on to the next.
+
+break
+-----
+This quits the current loop regardless of condition, exit clause or any other circumstance.
+
+    apples=10
+    while [ $apples -gt 0 ]; do
+		if [ $apples -eq 1 ]; then
+			echo "I only have 1 apple left, this one is for me"
+			break
+		fi
+		
+        echo "I have $apples apples, lets donate one"
+        let apples=apples-1
+    done
+	
+Here we can see that a break if introduced to quit out of the loop before the loops exist clause is met.
+
+continue
+--------
+This allows the loop to squit execution of the unit of work for the current iteration.
+
+	numbers=(1 2 3 4 5 6 7 8 9)
+	# echo the even numbers
+	for n in ${numbers[@]}; do
+		if [ $(( n%2 )) -ne 0 ]; then
+			continue
+		fi
+		echo "$n"
+	done
+
+Looping other our array of numbers, if the number is not divisible by 2, we want to skip it, but not quit the entire loop.
