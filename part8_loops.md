@@ -23,7 +23,7 @@ Let's look at an example:
 
 	apples=5
 	while [ $apples -gt 0 ]; do 	# semicolon indicates there are 2 lines here
-		echo "we have $apples apples, lets donate one"
+		echo "I have $apples apples, lets donate one"
 		let apples=apples-1			# let is a bash builtin, like echo. THIS ALSO TRIGGERS OUR EXIST CLAUSE
 	done
 
@@ -44,4 +44,18 @@ The `for` loop is designed to iterate over data structures. More specifically it
 	done								# we're done. close the for loop
 	
 > **Task:** What are the 3 main components (condition, unit of work and exist clause) if the above example?
+
 > **Task:** Can you rewrite the above `for` loop using a `while` loop? (this will let you see the 3 main components more clearly)
+
+
+until loop
+----------
+The `until` loop is very similar to the `while` loop in structure, with the exaception being that the the loop continues to iterate `until` the condition is met. Somewhat of a reverse while loop. Let's look at an example:
+
+	apples=0
+	until [ $apples -gt 5 ]; do 	
+		echo "I have $apples apples, I'll stop taking apples until I have more than 5"
+		let apples=apples+1		
+	done
+	
+To better understand this, we need to negate the condition. in otherwords, the `until` loop thinks in the following way: "I'm going to continue to do the unit of work, until some condtion is met". That is to say the exit clause is the condition being true. and the condition for doing the loop is if the `condition` is not true.
