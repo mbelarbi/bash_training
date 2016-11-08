@@ -23,7 +23,7 @@ here, we are running command1 and immediately starting command2 without waiting 
 
 double ampersand &&
 -------------------
-The double && is used as an AND control operator for commands. It is used to running a command if and only if the command that proceeded it finished successfully (i.e exit code 0).
+The double && is used as an AND control operator for commands. It is used to run a command if and only if the command that proceeded it finished successfully (i.e exit code 0).
 
 	command1 && command2
 
