@@ -33,3 +33,16 @@ Exit appropriately
 `exit 0`: Put that at the end of your scripts.
 
 `exit 1`: Use this to indicate an unssucceful exit.
+
+Silver Searcher
+---------------
+Use this instead of grep. The silver searcher is a faster, prettier and easier to use version of grep.
+https://github.com/ggreer/the_silver_searcher
+
+word count
+----------
+`wc` is amazing. it counts number of lines, words and characters in a given file.
+
+sleep
+-----
+`sleep 5` simple and straight forward, just hang for 5 seconds :)
