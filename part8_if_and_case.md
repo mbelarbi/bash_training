@@ -102,3 +102,6 @@ Case statements are a nicer way of writing a `if, elif, elif .... else` statemen
   		*) 
 			echo "we gotta go to work";;
 	esac
+
+Recall the double semicolon, this is only ever used to indicate an end to a case section.
+
