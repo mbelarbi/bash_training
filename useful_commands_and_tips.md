@@ -3,12 +3,16 @@ Useful commands
 
 Bang bang
 ---------
-That's `!!`. It repeats the previous bash command line.
+That's `!!`. It repeats the previous bash command.
 
 where am i?
 -----------
 `pwd`
 make sure you know exactly where you are before running any program that cannot be undone (i.e an rm -rf)
+
+go back
+-------
+`cd -` takes you back to the previous directory you were on. (Not the parent directory of where you are)
 
 incognito
 ---------
