@@ -1,4 +1,4 @@
-useful commands
+Useful commands
 ===============
 
 Bang bang
