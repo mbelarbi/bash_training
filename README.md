@@ -9,5 +9,5 @@ Contents
   - [Part 5: Builtins & Arithmetics](part5_builtins_and_arithmetics.md)
   - [Part 6: Strings & Special Characters](part6_strings_and special_characters.md)
   - [Part 7: Arrays](part7_arrays.md)
-  - [Part 8: If](part8_if.md)
+  - [Part 8: If](part8_if_and_case.md)
   - [Part 9: Loops](part9_loops.md)
