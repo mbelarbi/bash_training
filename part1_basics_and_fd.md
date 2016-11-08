@@ -121,6 +121,7 @@ Exit code
 =========
  - A successful bash command exists with code 0.
  - An unsuccessful bash command exists with a code other than 0 (mainly 1).
+ - An exit code 2 is used to indicate a bash builtin was not used correctly.
  - An exit code of 3 or 103 indicates that the command failed, but the details are program specific. So for example if we run a `psql` command in bash and it fails, we might get an exit code 3, where the details of the failure are handled by the failing program, in this case `psql`.
 	
 
