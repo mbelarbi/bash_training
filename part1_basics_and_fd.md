@@ -120,8 +120,10 @@ Example usage of file descriptors
 Exit code
 =========
  - A successful bash command exists with code 0.
- - An unsuccessful bash command exists with a code other than 0 (mainly 1).
+ - An unsuccessful bash command exists with a code other than 0 (mainly 1). Exit code 1 is a catch-all code for a failure.
  - An exit code 2 is used to indicate a bash builtin was not used correctly.
  - An exit code of 3 or 103 indicates that the command failed, but the details are program specific. So for example if we run a `psql` command in bash and it fails, we might get an exit code 3, where the details of the failure are handled by the failing program, in this case `psql`.
+ 
+There are a few other specific exit codes. The most common are 0 and 1.
 	
 
