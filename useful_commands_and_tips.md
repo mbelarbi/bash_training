@@ -46,3 +46,14 @@ word count
 sleep
 -----
 `sleep 5` simple and straight forward, just hang for 5 seconds :)
+
+Command substitution
+--------------------
+This is the process of assigning the output of a command to a variable by enclosing it in parentheses:
+
+	today=$(date +%d-%b-%Y)
+	echo $today
+	
+We have substituted the variable `today`, for the date command. You can put a full blown bash command wit hpipes and everything inside those brackets and assign it to a variable.
+	
+	
