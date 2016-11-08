@@ -59,5 +59,7 @@ This is the process of assigning the output of a command to a variable by enclos
 	echo $today
 	
 We have substituted the variable `today`, for the date command. You can put a full blown bash command wit hpipes and everything inside those brackets and assign it to a variable.
-	
-	
+
+search history
+--------------
+`Ctrl+r`. Search your bash history as you type.
