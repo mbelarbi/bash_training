@@ -62,7 +62,7 @@ Usign the Not operator, we can desscribe the OR operator as follows:
 
 double semicolon ;;
 -------------------
-This is used when writing switch/case statements, `;`; is used to mark the end of a case statement. There is no other instance where you would use a double semicolon other than cases (as far as I know). See [part 9](part8_if_and_case.md) for an example of  case statements
+This is used when writing switch/case statements, `;`; is used to mark the end of a case statement. There is no other instance where you would use a double semicolon other than cases (as far as I know). See [part 8](part8_if_and_case.md) for an example of  case statements
 
 brackets () {}
 ---------------
