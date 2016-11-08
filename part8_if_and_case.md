@@ -87,3 +87,18 @@ There are several ways to compare of test if a condition is met, below are the m
 |`!=` 			|String		 	|`if [ "$a" != "$b" ]` 	|String comparison, not equal to					|
 |`-z`	  		|String		 	|`if [ -z "$a" ]` 		|String is null, has zero length					|
 |`-n`	  		|String		 	|`if [ -n "$a" ]` 		|String is not null									|
+
+Case
+====
+Case statements are a nicer way of writing a `if, elif, elif .... else` statement. lets take a look at a simple example:
+
+	#!/usr/bin/env bash
+	DAY='Monday'
+	case $DAY in
+  		Saturday | Sunday ) 
+			echo "woohoo its the weekend";;
+  		Friday ) 
+			echo "almost the weekend ";;
+  		*) 
+			echo "we gotta go to work";;
+	esac
