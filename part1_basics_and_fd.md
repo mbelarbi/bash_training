@@ -117,9 +117,10 @@ Example usage of file descriptors
 	# Merge standard error with standard out and pass them both to another command
 	command 2>&1 | command2
 
-Successful bash command
-=======================
+Exit code
+=========
 A successful bash command exists with code 0.
 An unsuccessful bash command exists with a code other than 0 (mainly 1).
+An exit code of 3 or 103 indicates that the command failed, but the details are program specific. SO for example if we run a `psql` command in bash and it fails, we might get an exit code 3, where the details of the failure are handled by the failing program, in this case `psql`.
 	
 
