@@ -63,3 +63,35 @@ We have substituted the variable `today`, for the date command. You can put a fu
 search history
 --------------
 `Ctrl+r`. Search your bash history as you type.
+
+Brace expansion
+---------------
+Brace expansion can be very useful for things like cartesian product. lets look at a few examples:
+
+	echo {Mon,Tues,Wednes,Thurs,Fri,Satur,Sun}day
+	# Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+	
+	echo a{b,c,d}e 
+	# abe ace ade
+	
+	echo {a,b,c}{d,e,f} 
+	# ad ae af bd be bf cd ce cf
+
+It can also be used for sequencing (using the dot dot `..` notation):
+
+	echo {1..10}
+	# 1 2 3 4 5 6 7 8 9 10
+	
+	echo draft{1..5}.txt
+	# draft1.txt draft2.txt draft3.txt draft4.txt draft5.txt
+	
+	echo {a..z}
+	# a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+Also sequencing patterns:
+	
+	echo {1..20..2}		# number 1 to 20 every 2nd number
+	# 1 3 5 7 9 11 13 15 17 19
+
+	echo {a..z..3}		# letters a to z every 3rd letter
+	# a d g j m p s v y
