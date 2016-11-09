@@ -43,4 +43,4 @@ There are several augmentations or useful expansions that bash allows you to do 
 
 Calling functions
 -----------------
-Functions are simply called by using their name :) followed by any areguements. The only constraint is that a function must be decalred before it is called. SO in the above greetings function, I cannot call greeting before the function is even declared.
+Functions are simply called by using their name :) followed by any areguements. The only constraint is that a function must be decalred before it is called. So in the above greetings function, I cannot call greeting before the function is even declared.
