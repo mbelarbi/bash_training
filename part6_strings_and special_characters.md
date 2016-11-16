@@ -73,12 +73,12 @@ Substring
 
 	name='Miloud'
 	fullname="$name Belarbi"
-	echo "${name:2}" 		# loud
-	echo "${name:1:3}"		# ilo
-	echo "${name:0:-2}"		# Milo
-	echo "${name#M*l}"		# oud (From the front of the string, remove the shortest match)
+	echo "${name:2}" 			# loud
+	echo "${name:1:3}"			# ilo
+	echo "${name:0:-2}"			# Milo
+	echo "${name#M*l}"			# oud (From the front of the string, remove the shortest match)
 	echo "${fullname##M*d}"		# Belarbi (From the front of the string, remove the longest match)
-	echo "${name%o*d}"		# Mil (From the back of the string, remove the shortest match)
+	echo "${name%o*d}"			# Mil (From the back of the string, remove the shortest match)
 	echo "${fullname%%B*i}"		# Miloud (From the back of the string, remove the longest match)
 	
 String replacement
