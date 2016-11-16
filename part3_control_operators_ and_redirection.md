@@ -104,11 +104,11 @@ This will run the grep command on the contents of the file.txt
 
 greater than and less than <>
 -----------------------------
-This is basicall ythe same as the less than redirection, but instead it opens the file for btoh read+write operations. It's not common because rarely would you need to both read from and write to the same file on a single command. but good to know :)
+This is basically the same as the less than redirection, but instead it opens the file for both read+write operations. It's not common because rarely would you need to both read from and write to the same file on a single command. but good to know :)
 
 triple less than <<<
 --------------------
-This is used to provide input fro mthe shell int oa command rather than a file, for example:
+This is used to provide input from the shell into a command rather than a file, for example:
 	grep 'hell' <<< 'hello world'
 
 ampersand redirection &>, &>>
