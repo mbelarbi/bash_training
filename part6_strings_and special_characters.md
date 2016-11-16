@@ -59,7 +59,7 @@ Notice the space before `file1`, to eliminate this nasty bug we should wrap our 
 
 	rm -r "home/miloudbelarbi/Documents/$filename"
 	
-Yes you could write and if statement to check the IFS, but why not just use double quotes? :)
+Yes you could write an if statement to check the IFS, but why not just use double quotes? :)
 
 Length of String
 ----------------
