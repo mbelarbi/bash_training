@@ -35,7 +35,7 @@ These are other programs installed on the system. i.e vim, python, mysql, psql e
 
 When bash defaults to using an external program (i.e. the command name wasn't found as a function, alias or builtin) it will search each `PATH` location and stop at the first location it finds. Bash then stores this location so the next time you use the external program, it knows where to go and fetch it from.
 
-So how do you know if something is a function, alias, builtin or an external command? I could create a function called `echo`, and it will always be used instead of the builtin echo, this is snealy and it would take a long time to debug something so trivial. The best way to check is to use `type`:
+So how do you know if something is a function, alias, builtin or an external command? I could create a function called `echo`, and it will always be used instead of the builtin echo, this is sneaky and it would take a long time to debug something so trivial. The best way to check is to use `type`:
 	
 	type command-name
 
