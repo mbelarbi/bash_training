@@ -100,7 +100,7 @@ Bash considers the following as special:
 |`""`	  |Double quotes: same as single quotes but allows for variable expansions					|
 |`\`	  |Backslash: escape special characters										|
 |`#`	  |Comment. Also used for length in variable expansion								|
-|`[[]]`	  |conditional test: evaluate soemthing to either true or false, i.e. [[ 1 > 0 ]] evaluates to true		|
+|`[[]]`	  |conditional test: evaluate something to either true or false, i.e. [[ 1 > 0 ]] evaluates to true		|
 |`!`	  |Negate: reverse the result of a test or command								|
 |`>`, `<` |Redirection: redirect the input or output of a command							|
 |`|`	  |Pipe: special redirection, redirect the output of one command as the input of another			|
