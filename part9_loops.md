@@ -99,7 +99,7 @@ This allows the loop to squit execution of the unit of work for the current iter
 		echo "$n"
 	done
 
-Looping other our array of numbers, if the number is not divisible by 2, we want to skip it, but not quit the entire loop.
+Looping over our array of numbers, if the number is not divisible by 2, we want to skip it, but not quit the entire loop.
 
 
 Exercise
