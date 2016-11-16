@@ -53,7 +53,7 @@ Lets demonstrate the importance of double quoting variable expansions:
 	
 	rm -r home/miloudbelarbi/Documents/$filename
 	
-If the `IFS` (internal field separator) is not set to bash's default new line character and instead set to nothing, and you enter ` file1` (that is space and then file1),
+If the `IFS` (internal field separator) is not set to bash's default new line character and instead set to nothing, and you enter `' file1'` (that is space and then file1),
 the `rm` command will remove all files not just file1, becuase it might expand `$filename` as follows: `rm -r home/miloudbelarbi/Documents/ file1`.
 Notice the space before `file1`, to eliminate this nasty bug we should wrap our variable expansions in double quotes:
 
