@@ -16,16 +16,16 @@ Bash reads commands 1 line at a time, i.e:
 
 The if block is a compound command, that is there is no specific output or result from doing an if, it just groups a bunch of smaller logical commands.
 
-Bash will continue asking for more information until it has enough to execute the command, we are doing this in the interactive mode of bash. alternatively we could just put that if block in a file and run the script, this is the non interactive mode.
+Bash will continue asking for more information until it has enough to execute the command, we are doing this in the interactive mode of bash. Alternatively we could just put that if block in a file and run the script, this is the non interactive mode.
 
 Hash bang #!
 ------------
 
-In non interactive mode (i.e writing the commands in a file), the commands are just a list of commands, not a bash script. For it to truely be a bash script we need to tell the kernel that runs that file how it should execute it (right now it could be anything, a list of python commands, a shopping list etc). at the top of any bash script we should explicity indicate that we want bash to run this, we do this by:
+In non interactive mode (i.e writing the commands in a file), the commands are just a list of commands, not a bash script. For it to truely be a bash script we need to tell the kernel that runs that file how it should execute it (right now it could be anything, a list of python commands, a shopping list etc). At the top of any bash script we should explicity indicate that we want bash to run this, we do this by:
 
 	#!<path to bash>
 
-in most bash scripts you might see this as `#!/bin/bash`. The only problem with this is bash might not be installed on your system in that directory. it better to use the env command to locate bash for us so instead we should do:
+In most bash scripts you might see this as `#!/bin/bash`. The only problem with this is bash might not be installed on your system in that directory. It better to use the env command to locate bash for us so instead we should do:
 
 	#!/usr/bin/env bash
 
@@ -93,12 +93,17 @@ The pipe is a way to connect 2 comamnds together by passing the FD1 of command 1
 
 	echo 'Hello world' | grep 'hello'
 
-this is broken down in 2 commands, command1 (the `echo` command) and command 2 (the `grep` command). The standard output (FD1) of the `echo` command is used as the standard input (FD0) of `grep` command.
+This is broken down in 2 commands, command1 (the `echo` command) and command 2 (the `grep` command). The standard output (FD1) of the `echo` command is used as the standard input (FD0) of `grep` command.
 
-A pipe redirect can also be issued as `|&`. (as of bash version 4) This is the equivalent of `2>&1`  that we talked about previously. This means that we not only want to pass the standard output (FD1) but also the standard error (FD2) both as the standard input (FD1) of the grep command. Sometimes this can be undesirable unless the second command is prepared to handle any error the first command will throw. here is an example of this:
+A pipe redirect can also be issued as `|&`. (as of bash version 4) This is the equivalent of `2>&1`  that we talked about previously. This means that we not only want to pass the standard output (FD1) but also the standard error (FD2) both as the standard input (FD1) of the grep command. Sometimes this can be undesirable unless the second command is prepared to handle any error the first command will throw. Here is an example of this:
+
 
 	find -name 'myfile.*' |& grep -v "Permission denied"
+	cd /
+	find -name 'myfile.*' |& grep -v "Permission denied"
+	
+First we are in the directory where we have full permission and there will be no 'Permission denied' errors.
+After changing to the root of the machine we do not have access to several folders as we are not logged on as super user.
 
-> **Task:** why do we need `|&` and not the regular `|` ?
 
-
+> **Task:** Why do we need `|&` and not the regular `|` ?
