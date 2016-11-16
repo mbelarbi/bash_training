@@ -87,7 +87,7 @@ Pipelines
 	command1 [ | OR |& ] command2
 
 
-In the real world pipes serve to take something, from one place and transfer it to another place. It's exactly the same in Bash. The pipe is oneof the easiest, most common and most powerful control operators in bash. We'll cover control operators in the next section.
+In the real world pipes serve to take something, from one place and transfer it to another place. It's exactly the same in Bash. The pipe is one of the easiest, most common and most powerful control operators in bash. We'll cover control operators in the next section.
 
 The pipe is a way to connect 2 comamnds together by passing the FD1 of command 1 as the FD0 of command 2. (That is the standard output of command 1 is used as the standard input of command 2). For example:
 
