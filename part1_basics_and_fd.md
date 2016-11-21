@@ -14,7 +14,7 @@ They function very similar to once another but it's still important to know whic
 
 What do we do with it
 ---------------------
-It's designed to take input from you (commands) and give your the results or the output of your commands. In otherwords bash lets you interact with your system (and it's programs) using a text based interface.
+It's designed to take input from you (commands) and give your the results or the output of your commands. In other words bash lets you interact with your system (and it's programs) using a text based interface.
 
 
 Modes
@@ -50,10 +50,10 @@ From a high level point of view:
     Keyboard, mouse display   <----->   os gui   <----->   terminal (your text-based interface)  <---->  Bash 
 
 
-From a low level point of view bash has atleast 3 forms of I/O (ways for you and bash to communicate with each other), these are called File descriptors:
+From a low level point of view bash has at least 3 forms of I/O (ways for you and bash to communicate with each other), these are called File descriptors:
 
 - Standard input
-	This is "File descriptor 0". This is how most commands run on bash receive their input, by default this is yoru keyboard.
+	This is "File descriptor 0". This is how most commands run on bash receive their input, by default this is your keyboard.
 
 - Standard output
 	This is "File descriptor 1". This is how most commands you run on bash send you their output. By default its your screen.
@@ -93,7 +93,7 @@ you can write a bash process that sends it's errors to an error file while its r
 Each time a program is started or invoked by bash, bash creates a running process for it. Processes have plugs, called file descriptors which allow them to connect streams that lead to files, devices or other processes.
 
 
-NOTE: it's important to know that File descriptors are specific to a process. That means even if you write a bash command that inturn invokes 2 separate processes, the file descriptors for each process are different. for example, lets brake this down from a file descriptor point of view:
+NOTE: it's important to know that File descriptors are specific to a process. That means even if you write a bash command that in turn invokes 2 separate processes, the file descriptors for each process are different. for example, lets brake this down from a file descriptor point of view:
 
 	 echo "hello world" | grep "hell" 2>&1 > file.txt
 
@@ -125,5 +125,3 @@ Exit code
  - An exit code of 3 or 103 indicates that the command failed, but the details are program specific. So for example if we run a `psql` command in bash and it fails, we might get an exit code 3, where the details of the failure are handled by the failing program, in this case `psql`.
  
 There are a few other specific exit codes. The most common are 0 and 1.
-	
-

@@ -17,7 +17,7 @@ The while loop is designed to do some piece of work given that a specific condit
 		some work
 	done
 	
-> **Important:** It is our responsibility to ensure the while loop has an exist clause. Our exist clause is usually the condition faling, but on occasions we can have manual forced intervention (we'll cover this in loop control)
+> **Important:** It is our responsibility to ensure the while loop has an exist clause. Our exist clause is usually the condition failing, but on occasions we can have manual forced intervention (we'll cover this in loop control)
 
 Let's look at an example:
 
@@ -50,7 +50,7 @@ The `for` loop is designed to iterate over data structures. More specifically it
 
 until loop
 ----------
-The `until` loop is very similar to the `while` loop in structure, with the exaception being that the the loop continues to iterate `until` the condition is met. Somewhat of a reverse while loop. Let's look at an example:
+The `until` loop is very similar to the `while` loop in structure, with the exception being that the the loop continues to iterate `until` the condition is met. Somewhat of a reverse while loop. Let's look at an example:
 
 	apples=0
 	until [ $apples -gt 5 ]; do 	
@@ -58,9 +58,9 @@ The `until` loop is very similar to the `while` loop in structure, with the exac
 		let apples=apples+1		
 	done
 	
-To better understand this, we need to negate the condition. in otherwords, the `until` loop thinks in the following way: 
+To better understand this, we need to negate the condition. in other words, the `until` loop thinks in the following way:
 	
-	"I'm going to continue to do the unit of work, until some condtion is met". 
+	"I'm going to continue to do the unit of work, until some condition is met".
 
 That is to say the exit clause is the condition being true. and the condition for doing the loop is if the `condition` is not true.
 
@@ -106,6 +106,3 @@ Exercise
 --------
 
 Write a simple bash script that continues to talk to the user and reply based on the user's input. The script should only stop talking once the user says `bye`.
-
-
-

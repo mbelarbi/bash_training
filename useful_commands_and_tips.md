@@ -36,7 +36,7 @@ Exit appropriately
 ------------------
 `exit 0`: Put that at the end of your scripts.
 
-`exit 1`: Use this to indicate an unssucceful exit.
+`exit 1`: Use this to indicate an unsuccessful exit.
 
 Silver Searcher
 ---------------
@@ -58,7 +58,7 @@ This is the process of assigning the output of a command to a variable by enclos
 	today=$(date +%d-%b-%Y)
 	echo $today
 	
-We have substituted the variable `today`, for the date command. You can put a full blown bash command wit hpipes and everything inside those brackets and assign it to a variable.
+We have substituted the variable `today`, for the date command. You can put a full blown bash command with pipes and everything inside those brackets and assign it to a variable.
 
 search history
 --------------

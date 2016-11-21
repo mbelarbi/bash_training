@@ -12,13 +12,13 @@ The command name is the key in all the parts, without it the rest is useless. It
 	3) builtins
 	4) external commands
 
-Functions you declare in your scripts always take priority. When a function is declared, bash puts the name of the function in a list in memory, it then searches this list first and formost when ever a command is run. After functions, any aliases that match the command name are used instead. Builtins are next in the pecking order, they are basically a bunch of builtin commands/function into bash. We'll look at these later. Finally external commands are last, these are system programs are looked up in the `PATH`.
+Functions you declare in your scripts always take priority. When a function is declared, bash puts the name of the function in a list in memory, it then searches this list first and foremost when ever a command is run. After functions, any aliases that match the command name are used instead. Builtins are next in the pecking order, they are basically a bunch of builtin commands/function into bash. We'll look at these later. Finally external commands are last, these are system programs are looked up in the `PATH`.
 
 If after bash has exhausted all efforts to find the name of the command you want to run and still can't find anything, the nit will issue a command not found error.
 
 Built ins
 ---------
-These are what it says on the tin, commands built into bash, some are very common and some are uncommon, lets take alook at some common ones:
+These are what it says on the tin, commands built into bash, some are very common and some are uncommon, lets take a look at some common ones:
 
 	* echo
 	* cd
@@ -26,7 +26,7 @@ These are what it says on the tin, commands built into bash, some are very commo
 	* history
 	* if then else.
 
-To get a complete list of all builtins, just type `help` on the bash shell. To get more information and optional arguements for a specific builtin, just type help followed by the built in.
+To get a complete list of all builtins, just type `help` on the bash shell. To get more information and optional arguments for a specific builtin, just type help followed by the built in.
 
 
 external commands
