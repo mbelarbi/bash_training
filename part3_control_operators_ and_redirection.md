@@ -2,7 +2,7 @@ Lists
 =====
 	command1 co command2 co command3 ...
 
-Lists are just a sequence of 2 or more commands. A bash script is a list, many commands one after the other. The important thing with lists is that there is a control operator (co) that separates them and tells bash how to run them when in sequence. Writing a bash command is fairly straight forward, the get the most of bash it is important to understand how we connect 1 or more comamnds together. This is why control operators are important.
+Lists are just a sequence of 2 or more commands. A bash script is a list, many commands one after the other. The important thing with lists is that there is a control operator (co) that separates them and tells bash how to run them when in sequence. Writing a bash command is fairly straight forward, the get the most of bash it is important to understand how we connect 1 or more commands together. This is why control operators are important.
 
 
 Control operators
@@ -40,7 +40,7 @@ This is the OR operator for commands. In other words, this will run a command on
 
 	command1 || command2
 
-Command2 will only run if command1 failed. Becuase this is an OR operator, there is no need to run command2 if command1 was successful.
+Command2 will only run if command1 failed. Because this is an OR operator, there is no need to run command2 if command1 was successful.
 
 task: How would you write the || operator using an if block?
 
@@ -54,7 +54,7 @@ This is the NOT operator. Simple, just negate the outcome exit status of a comma
 
 This just returns an exit code 0 if the actual exit code of command1 is a non zero (i.e unsuccessful), and returns an exist code 1 if command1 was successful.
 
-Usign the Not operator, we can desscribe the OR operator as follows:
+Usign the Not operator, we can describe the OR operator as follows:
 
 	if !command1; then 
 		command2; 
@@ -66,7 +66,7 @@ This is used when writing switch/case statements, `;` is used to mark the end of
 
 Brackets () {}
 ---------------
-Brackets, as with in many other domains, serve to group things together. Bash is no different. Why would you want to group commands together? In the case where you are writing a squence of several commands joined by one of more control operators and it might be handy to group some together and uniqfy their output before passing it on to another command.
+Brackets, as with in many other domains, serve to group things together. Bash is no different. Why would you want to group commands together? In the case where you are writing a squence of several commands joined by one of more control operators and it might be handy to group some together and unify their output before passing it on to another command.
 
 
 Redirections
@@ -126,4 +126,4 @@ We now have a file with the contents 'hello world'. Brilliant, all good so far.
 	
 What do you expect the contents of file .txt to be? 
 
-file.txt is actually empty. Why? Thats because bash handles redirections before commands. In other words, redirection of the output from the grep command causing file.txt to the opened for writing and because we are using a `>` we have truncated the contents of the file ready for writing. Bash then cats the file (it's empty remember), the pipes the output to grep and finally storing that output into the same file. 
+file.txt is actually empty. Why? That's because bash handles redirections before commands. In other words, redirection of the output from the grep command causing file.txt to the opened for writing and because we are using a `>` we have truncated the contents of the file ready for writing. Bash then cats the file (it's empty remember), the pipes the output to grep and finally storing that output into the same file.

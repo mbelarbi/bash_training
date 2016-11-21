@@ -1,7 +1,7 @@
 If
 ==
 
-The if staement is a standard conditional test. It tests if some condition is met, and executes a unit of work.
+The if statement is a standard conditional test. It tests if some condition is met, and executes a unit of work.
 
 	if [ some condition is true ]; then
 		do some work
@@ -20,7 +20,7 @@ We can further expand this to include multiple conditions that each have their o
 	if [ some condition is true ]; then
 		do some work
 	elif [some other condition is true ]; then
-		do soem other work
+		do some other work
 	.... # as many elif blocks as needed
 	else
 		finally do some this work
@@ -58,7 +58,7 @@ Both the conditions MUST be met for the unit of work to be executed. If the firs
 
 OR
 --
-Similar to `AND` except if any of the conditions are met, the unit of work is executed, this is doen using `||`:
+Similar to `AND` except if any of the conditions are met, the unit of work is executed, this is done using `||`:
 	
 	if [ $day == "christmas" ] || [ $day == "birthday" ]; then
 		echo "time for gifts"
@@ -104,4 +104,3 @@ Case statements are a nicer way of writing a `if, elif, elif .... else` statemen
 	esac
 
 Recall the double semicolon, this is only ever used to indicate an end to a case section.
-

@@ -42,12 +42,12 @@ The simplest of bash commands is made up of 3 parts (above as P1, P2 and P3). Ev
 
 P2 (name [ arg ... ])
 ---------------------
-This is the main part of the command, you would need to tell bash what is the name of the command you wish to run and the commands optional arguements, an example of this would be:
+This is the main part of the command, you would need to tell bash what is the name of the command you wish to run and the commands optional arguments, an example of this would be:
 
 	ls -l -a -h
 
-ls being the command name and -l, -a, -h being optional arguements to the command ls.
-optional arguements that take no variables can be grouped under a single hyphen (-), i.e: 
+ls being the command name and -l, -a, -h being optional arguments to the command ls.
+optional arguments that take no variables can be grouped under a single hyphen (-), i.e:
 	
 	ls -lah 
 
