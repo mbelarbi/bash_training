@@ -126,4 +126,4 @@ We now have a file with the contents 'hello world'. Brilliant, all good so far.
 	
 What do you expect the contents of file .txt to be? 
 
-file.txt is actually empty. Why? That's because bash handles redirections before commands. In other words, redirection of the output from the grep command causing file.txt to the opened for writing and because we are using a `>` we have truncated the contents of the file ready for writing. Bash then cats the file (it's empty remember), the pipes the output to grep and finally storing that output into the same file.
+file.txt is actually empty. Why? That's because bash handles redirections before commands. In other words, redirection of the output from the grep command causing file.txt to the opened for writing and because we are using a `>` we have truncated the contents of the file ready for writing. Bash then cats the file (it's empty remember), then pipes the output to grep and finally storing that output into the same file.
