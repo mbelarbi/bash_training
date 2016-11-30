@@ -36,7 +36,7 @@ Special argument parameters
 ----------------------------
 There are several augmentations or useful expansions that bash allows you to do with respect to the arguments passed in to a command.
 
-* `$*`: Join all arguments with current IFS (internal field separator)
+* `$*`: Join all arguments with current IFS (internal field separator), by default this is a whitespace (i.e space, new line, tab etc) and it is how bash recognises word boundaries when parsing character strings.
 * `$#`: Number of arguments passed in
 * `$?`: The exit code of the previous command (1 for failure, 0 for success)
 * `$$`: The unique process identifier of the current shell process that is running
