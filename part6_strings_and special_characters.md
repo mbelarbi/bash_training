@@ -22,7 +22,7 @@ Sometimes it can be useful to include braces in variable expansions, for example
 	echo "your current record is $times"
 	
 We want to add a `s` to the end of the time variable (indicating seconds), however bash tries to find the variable `times`.
-to tell bash that the `s` isa literal string and not part of the variable name we do it using braces:
+to tell bash that the `s` is a literal string and not part of the variable name we do it using braces:
 
 	time=23
     echo "your current record is ${time}s"
