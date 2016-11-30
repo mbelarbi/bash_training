@@ -4,7 +4,7 @@ Functions in bash serve the same purpose as all programming languages, they crea
 
 	[ function ] name [ () ] { unit-of-work } [ redirection ]
 
-the keyword function is optional, this is then followed by the name of the function. The `()` are always empty in bash they do not server to take in arguments like some other programming languages, their purpose is to indicate that this is a function. This is then followed by the actual unit of work inside {}. Finally we have any redirections we wish to add to our functions.
+the keyword function is optional, this is then followed by the name of the function. The `()` are always empty in bash they do not server to take in arguments like some other programming languages, their purpose is to indicate that this is a function. This is then followed by the actual unit of work inside `{}`. Finally we have any redirections we wish to add to our functions.
 
 In bash you can choose to put the keyword 'function' or omit it, there is no difference whatsoever in bash, for example the following 2 functions are both valid in bash:
 	
