@@ -76,7 +76,7 @@ There are several ways to compare of test if a condition is met, below are the m
 |`-eq`	  		|Arithmetic 	|`if [ "$a" -eq "$b" ]` |is equal to  										|
 |`-ne`	  		|Arithmetic 	|`if [ "$a" -ne "$b" ]`	|is not qual to										|
 |`-gt`	  		|Arithmetic 	|`if [ "$a" -gt "$b" ]` |is greater than									|
-|`-ge`	  		|Arithmetic 	|`if [ "$a" -gt "$b" ]` |is greater than or equal to						|
+|`-ge`	  		|Arithmetic 	|`if [ "$a" -ge "$b" ]` |is greater than or equal to						|
 |`-lt`	  		|Arithmetic 	|`if [ "$a" -lt "$b" ]` |is less than										|
 |`-le`	  		|Arithmetic 	|`if [ "$a" -le "$b" ]` |is less than or equal to							|
 |`<`	  		|Arithmetic 	|`if (( "$a" < "$b" ))` |less than with double parentheses					|
