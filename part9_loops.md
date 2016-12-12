@@ -100,9 +100,3 @@ This allows the loop to squit execution of the unit of work for the current iter
 	done
 
 Looping over our array of numbers, if the number is not divisible by 2, we want to skip it, but not quit the entire loop.
-
-
-Exercise
---------
-
-Write a simple bash script that continues to talk to the user and reply based on the user's input. The script should only stop talking once the user says `bye`.
