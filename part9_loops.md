@@ -88,7 +88,7 @@ Here we can see that a break if introduced to quit out of the loop before the lo
 
 continue
 --------
-This allows the loop to squit execution of the unit of work for the current iteration.
+This allows the loop to quit execution of the unit of work for the current iteration.
 
 	numbers=(1 2 3 4 5 6 7 8 9)
 	# echo the even numbers
