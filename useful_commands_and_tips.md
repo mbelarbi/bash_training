@@ -12,7 +12,7 @@ make sure you know exactly where you are before running any program that cannot 
 
 go back
 -------
-`cd -` takes you back to the previous directory you were on. (Not the parent directory of where you are)
+`cd -` takes you back to the previous directory you were on (not the parent directory of where you are). This is useful for switching back and forth between 2 directories you are working on.
 
 incognito
 ---------
